@@ -75,13 +75,23 @@ Upload a video (MP4), extract frames, compute vectors, and store in Qdrant.
 
 **Body**: `multipart/form-data`
 **Field**: `file`
-```
+
 Select the Body then form-data key:file and upload video there
 ```
-
-```
 ` http://localhost:8000/upload_video'
+```
 
+```json
+{
+    "extracted": [
+        "extracted_frames\\cb85711dbf36446f9db1de3a5c18ac5e.jpg",
+        "extracted_frames\\dbba9efa8c9646409874bd7087219305.jpg",
+        "extracted_frames\\55c1e64a78564aafb7643d12bfbb987b.jpg",
+        "extracted_frames\\fd5b620d15bc4994b22bfac36550b919.jpg",
+        "extracted_frames\\45895c9ec95a4fd3b89414c62b126275.jpg",
+        "extracted_frames\\1f928086cac347d0b3a9a2fd11bdaea5.jpg"
+    ]
+}
 ```
 
 
