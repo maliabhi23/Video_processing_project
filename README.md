@@ -1,10 +1,5 @@
 # Video_processing_project
 
-
-Here is a complete `README.md` file for your **FastAPI Video Similarity Search** internship assignment project:
-
----
-
 ```markdown
 # 🎥 FastAPI Video Frame Similarity Search
 
@@ -26,7 +21,7 @@ This project is built as part of an internship assignment. It allows uploading v
 ## 🗂️ Project Structure
 
 ```
-
+```
 video-similarity-search/
 ├── app/
 │   ├── main.py               # FastAPI entrypoint
@@ -60,13 +55,7 @@ pip install -r requirements.txt
 
 ## 🧪 Running the App
 
-### 1️⃣ Start Qdrant (Local Docker)
 
-```bash
-docker run -p 6333:6333 -p 6334:6334 qdrant/qdrant
-```
-
----
 
 ### 2️⃣ Start FastAPI Server
 
@@ -74,7 +63,7 @@ docker run -p 6333:6333 -p 6334:6334 qdrant/qdrant
 uvicorn app.main:app --reload
 ```
 
-Open docs: [http://localhost:8000/docs](http://localhost:8000/docs)
+Open docs: [http://localhost:8000/docs](http://localhost:8000)
 
 ---
 
@@ -86,6 +75,11 @@ Upload a video (MP4), extract frames, compute vectors, and store in Qdrant.
 
 **Body**: `multipart/form-data`
 **Field**: `file`
+```
+` http://localhost:8000/upload_video'
+
+```
+
 
 ### `POST /search_similar`
 
@@ -123,27 +117,6 @@ frames/
 
 ---
 
-## 🔍 Testing
-
-Use [Postman](https://www.postman.com/) or Swagger UI to test:
-
-* Upload video → check frame extraction and vector insertion
-* Use a previously logged or returned vector to test `/search_similar`
-
----
-
-## 🔐 .env Configuration
-
-Create a `.env` file:
-
-```env
-QDRANT_HOST=localhost
-QDRANT_PORT=6333
-QDRANT_COLLECTION=video_frames
-```
-
----
-
 ## 📸 Example Search Vector (length = 512)
 
 ```json
@@ -168,26 +141,3 @@ QDRANT_COLLECTION=video_frames
 * Upload image to search instead of raw vector
 * Use deep features (e.g., MobileNet, CLIP) instead of color histograms
 * Add pagination or similarity thresholding
-
----
-
-## 📬 Submission
-
-Please review the code, API, and documentation. All source code is included and tested using Postman and Swagger.
-
----
-
-**Author**: \[Your Name]
-**Submission Date**: 26 June 2025
-
-```
-
----
-
-Would you like me to:
-- Generate a `.env` template file too?
-- Add a sample video or test script?
-- Push this as a GitHub-ready structure with `.gitignore` etc?
-
-Let me know!
-```
