@@ -76,6 +76,10 @@ Upload a video (MP4), extract frames, compute vectors, and store in Qdrant.
 **Body**: `multipart/form-data`
 **Field**: `file`
 ```
+Select the Body then form-data key:file and upload video there
+```
+
+```
 ` http://localhost:8000/upload_video'
 
 ```
