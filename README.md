@@ -63,7 +63,7 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
-Open docs: [http://localhost:8000/docs](http://localhost:8000)
+Open docs: [http://localhost:8000](http://localhost:8000)
 
 ---
 
